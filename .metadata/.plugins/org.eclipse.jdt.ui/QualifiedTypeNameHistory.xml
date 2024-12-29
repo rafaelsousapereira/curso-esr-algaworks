@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="com.algaworks.di.modelo.Cliente"/>
+    <fullyQualifiedTypeName name="com.algaworks.di.service.AtivacaoClienteService"/>
+    <fullyQualifiedTypeName name="com.algaworks.di.notificacao.NotificadorEmail"/>
+    <fullyQualifiedTypeName name="com.algaworks.di.notificacao.NotificadorSMS"/>
+</qualifiedTypeNameHistroy>

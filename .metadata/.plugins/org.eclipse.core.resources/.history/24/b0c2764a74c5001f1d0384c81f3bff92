@@ -1,0 +1,5 @@
+package com.algaworks.algafood.notificacao;
+
+public class NotificacaoEmail {
+
+}

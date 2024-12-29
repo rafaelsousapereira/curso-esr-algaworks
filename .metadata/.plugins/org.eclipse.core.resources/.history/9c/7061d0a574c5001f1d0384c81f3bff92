@@ -1,0 +1,9 @@
+package com.algaworks.algafood.di.service;
+
+import com.algaworks.algafood.notificacao.NotificacaoEmail;
+
+public class AtivacaoClienteService {
+	
+	private NotificacaoEmail notificador;
+
+}
