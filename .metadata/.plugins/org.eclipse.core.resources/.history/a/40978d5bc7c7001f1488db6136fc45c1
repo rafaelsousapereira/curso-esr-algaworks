@@ -9,7 +9,7 @@ import com.algaworks.algafood.notificacao.Notificador;
 @Component
 public class AtivacaoClienteService {
 	
-	@Autowired(required = false)
+	@Autowired
 	private Notificador notificador;
 	
 	public void ativar(Cliente cliente) {
