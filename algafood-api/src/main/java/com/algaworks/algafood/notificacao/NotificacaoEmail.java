@@ -1,5 +1,4 @@
 package com.algaworks.algafood.notificacao;
-
 import org.springframework.stereotype.Component;
 
 import com.algaworks.algafood.di.modelo.Cliente;
