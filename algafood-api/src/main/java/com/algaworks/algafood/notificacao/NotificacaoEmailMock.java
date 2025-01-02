@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.algaworks.algafood.di.modelo.Cliente;
 
 @Profile("dev")
-@TipoDeNotificacao(NivelUrgencia.COM_PRIORIDADE)
+@TipoDeNotificacao(NivelUrgencia.SEM_PRIORIDADE)
 @Component
 public class NotificacaoEmailMock implements Notificador {
 	
