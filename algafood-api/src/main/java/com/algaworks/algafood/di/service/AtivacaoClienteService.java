@@ -1,5 +1,8 @@
 package com.algaworks.algafood.di.service;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +17,16 @@ public class AtivacaoClienteService {
 	@TipoDeNotificacao(NivelUrgencia.COM_PRIORIDADE)
 	@Autowired
 	private Notificador notificador;
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("INIT " + notificador);
+	}
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("DESTROY");
+	}
 
 	public void ativar(Cliente cliente) {
 		cliente.ativar();

@@ -35,10 +35,10 @@ INDEX VERSION 1.134+/home/rafael/Documentos/estudos/Projetos/curso-esr-algaworks
 1352863065.index
 2368052695.index
 3755129187.index
-493937073.index
+466984302.index
 2050819971.index
 321594466.index
-466984302.index
+493937073.index
 1800881551.index
 4095146488.index
 1335837792.index
