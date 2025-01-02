@@ -1,2 +1,4 @@
 1735781835080	Copy compilation unit
 1735782004307	Rename field 'notificador'
+1735783236888	Rename enum constant 'NORMAL'
+1735783254332	Rename enum constant 'URGENTE'
