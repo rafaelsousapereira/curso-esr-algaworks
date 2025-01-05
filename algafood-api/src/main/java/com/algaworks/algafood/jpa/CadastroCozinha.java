@@ -19,4 +19,5 @@ public class CadastroCozinha {
 		return manager.createQuery("from Cozinha", Cozinha.class)
 				.getResultList();
 	}
+
 }

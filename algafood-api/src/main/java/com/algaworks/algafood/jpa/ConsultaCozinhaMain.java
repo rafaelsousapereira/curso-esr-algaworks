@@ -17,12 +17,13 @@ public class ConsultaCozinhaMain {
 				.run(args);
 				
 		CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
-
+		
 		List<Cozinha> cozinhas = cadastroCozinha.listar();
 		
 		for (Cozinha cozinha : cozinhas) {
 			System.out.println(cozinha.getNome());
 		}
+		
 	}
 
 }
