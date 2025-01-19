@@ -9,3 +9,7 @@ insert into restaurante (nome, taxa_frete, cozinha_id) values ('Shabat Food', 5.
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Thai Gourmet', 10, 1);
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Thai Delivery', 9.50, 1);
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Tuk Tuk Comida Indiana', 15, 3);
+
+-- Inserção Forma Pagamento
+insert into forma_pagamento (descricao) values ("Pix");
+insert into forma_pagamento (descricao) values ("Debito");
