@@ -13,3 +13,7 @@ insert into restaurante (nome, taxa_frete, cozinha_id) values ('Tuk Tuk Comida I
 -- Inserção Forma Pagamento
 insert into forma_pagamento (descricao) values ("Pix");
 insert into forma_pagamento (descricao) values ("Debito");
+
+-- Inserção Permissão
+insert into permissao (nome, descricao) values ("ADMIN", "Permissão de administrador");
+insert into permissao (nome, descricao) values ("USER", "Permissão de usuário");
