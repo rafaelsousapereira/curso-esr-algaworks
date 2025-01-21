@@ -17,3 +17,11 @@ insert into forma_pagamento (descricao) values ("Debito");
 -- Inserção Permissão
 insert into permissao (nome, descricao) values ("ADMIN", "Permissão de administrador");
 insert into permissao (nome, descricao) values ("USER", "Permissão de usuário");
+
+-- Inserção Estado
+insert into estado (id, nome) values (1, 'São Paulo');
+insert into estado (id, nome) values (2, 'Rio de Janeiro');
+
+-- Inserção Cidade
+insert into cidade (id, nome) values (1, 'Nova Odessa');
+insert into cidade (id, nome) values (2, 'Ipanema');
