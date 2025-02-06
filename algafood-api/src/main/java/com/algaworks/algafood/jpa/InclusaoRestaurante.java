@@ -22,7 +22,7 @@ public class InclusaoRestaurante {
 		restaurante.setNome("Brasa Food");
 		restaurante.setTaxaFrete(BigDecimal.valueOf(15.50));
 		
-		restaurantes.adicionar(restaurante);
+		restaurantes.salvar(restaurante);
 	}
 
 }

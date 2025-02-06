@@ -24,7 +24,7 @@ public class AlteracaoRestauranteMain {
 		restaurante.setNome("Shabat Food");
 		restaurante.setTaxaFrete(BigDecimal.valueOf(9.5));
 		
-		restaurantes.adicionar(restaurante);
+		restaurantes.salvar(restaurante);
 	}
 
 }
