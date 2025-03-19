@@ -18,11 +18,17 @@ import com.algaworks.algafood.domain.repository.RestauranteRepository;
 @RequestMapping("/teste")
 public class TesteController {
 
+    private final RestauranteController restauranteController;
+
 	@Autowired
 	private CozinhaRepository cozinhaRepository;
 	
 	@Autowired
 	private RestauranteRepository restauranteRepository;
+
+    public TesteController(RestauranteController restauranteController) {
+        this.restauranteController = restauranteController;
+    }
 	
 	@GetMapping("/cozinhas/por-nome")
 	public List<Cozinha> consultarPorNome(String nome) {
@@ -36,12 +42,12 @@ public class TesteController {
 	
 	@GetMapping("/restaurantes/por-taxa-frete")
 	public List<Restaurante> consultarPorTaxaFrete(BigDecimal taxaInicial, BigDecimal taxaFinal) {
-		return restauranteRepository.findByTaxaFreteBetween(taxaInicial, taxaFinal);
+		return restauranteRepository.queryByTaxaFreteBetween(taxaInicial, taxaFinal);
 	}
 	
 	@GetMapping("/restaurantes/por-nome")
 	public List<Restaurante> consultarPorNome(String nome, Long cozinhaId) {
-		return restauranteRepository.findByNomeContainingAndCozinhaId(nome, cozinhaId);
+		return restauranteRepository.consultarPorNome(nome, cozinhaId);
 	}
 	
 	@GetMapping("/restaurantes/primeiro-por-nome")
@@ -54,7 +60,7 @@ public class TesteController {
 		return restauranteRepository.findTop2ByNomeContaining(nome);
 	}
 	
-	@GetMapping("/cozinhas/count-by-cozinha-id")
+	@GetMapping("/restaurantes/count-by-cozinha-id")
 	public int contarRestauratesPorIdCozinha(Long cozinhaId) {
 		return restauranteRepository.countByCozinhaId(cozinhaId);
 	}
@@ -62,6 +68,12 @@ public class TesteController {
 	@GetMapping("/cozinhas/exists-por-nome")
 	public boolean consultarExisteCozinhaPorNome(String nome) {
 		return cozinhaRepository.existsByNome(nome);
+	}
+	
+	@GetMapping("/restaurantes/por-nome-taxa-frete")
+	public List<Restaurante> porNomePorFrete(String nome, 
+			BigDecimal taxaFreteInicial, BigDecimal taxaFreteFinal) {
+		return restauranteRepository.find(nome, taxaFreteInicial, taxaFreteFinal);
 	}
 	
 }
