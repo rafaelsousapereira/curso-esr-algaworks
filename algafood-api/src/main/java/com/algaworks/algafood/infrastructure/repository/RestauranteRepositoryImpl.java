@@ -24,8 +24,7 @@ public class RestauranteRepositoryImpl implements RestauranteRepositoryQueries {
 	    String jpql = "FROM Restaurante WHERE nome LIKE :nome "
 	                + "AND taxaFrete BETWEEN :taxaInicial AND :taxaFinal";
 
-	    return manager.createQuery("FROM Restaurante WHERE nome LIKE :nome "
-                + "AND taxaFrete BETWEEN :taxaInicial AND :taxaFinal", Restaurante.class)
+	    return manager.createQuery(jpql, Restaurante.class)
 	                 .setParameter("nome", "%" + nome + "%")
 	                 .setParameter("taxaInicial", taxaFreteInicial)
 	                 .setParameter("taxaFinal", taxaFreteFinal)
