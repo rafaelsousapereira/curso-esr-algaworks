@@ -49,8 +49,8 @@ public class Restaurante {
 	@Column(name = "taxa_frete", nullable = false)
 	private BigDecimal taxaFrete;
 	
-//	@JsonIgnoreProperties("hibernateLazyInitializer")
-	@JsonIgnore
+	@JsonIgnoreProperties("hibernateLazyInitializer")
+	//@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cozinha_id", nullable = false)
 	private Cozinha cozinha;
@@ -62,7 +62,7 @@ public class Restaurante {
 	@JsonIgnore
 	@CreationTimestamp
 	@Column(nullable = false, columnDefinition = "datetime")
-	private LocalDateTime dataCriacao;
+	private LocalDateTime dataCadastro;
 	
 	@JsonIgnore
 	@UpdateTimestamp
